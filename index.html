@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Deepawali | शुभ दीपावली</title>
+<meta name="description" content="Light five diyas and open a Deepawali blessing.">
+<meta name="theme-color" content="#0d0806">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 6c8 10 10 18 0 26-10-8-8-16 0-26z' fill='%23f0a23a'/%3E%3Cpath d='M8 36q24-8 48 0-4 18-24 18T8 36z' fill='%23c9a24d'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f1d98f"/><stop offset=".45" stop-color="#c9a24d"/><stop offset="1" stop-color="#6e4f18"/>
+    </linearGradient>
+    <symbol id="diya-body" viewBox="0 0 120 60">
+      <path d="M4 22Q60 12 116 22 110 54 60 57 10 54 4 22Z" fill="url(#gold)"/>
+      <path d="M100 21Q121 17 118 10 110 19 96 22Z" fill="url(#gold)"/>
+      <ellipse cx="60" cy="22" rx="54" ry="8" fill="#7a5a1f"/>
+      <ellipse cx="60" cy="22.5" rx="46" ry="5.5" fill="#2d1809"/>
+      <rect x="58" y="12" width="4" height="10" rx="2" fill="#120a05"/>
+      <path d="M22 36Q60 44 98 36" stroke="#6e4f18" stroke-width="1.2" fill="none" opacity=".7"/>
+      <circle cx="60" cy="46" r="2" fill="#8a6620"/>
+    </symbol>
+    <symbol id="divider" viewBox="0 0 240 16">
+      <path d="M0 8H100M140 8H240" stroke="#c9a24d" stroke-width=".8" opacity=".7"/>
+      <path d="M120 1l6 7-6 7-6-7z" fill="none" stroke="#c9a24d" stroke-width="1"/>
+      <circle cx="108" cy="8" r="1.6" fill="#c9a24d"/><circle cx="132" cy="8" r="1.6" fill="#c9a24d"/>
+    </symbol>
+  </defs>
+</svg>
+
+<button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false" aria-label="Sound on">
+  <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path class="waves" d="M16 8.5a5 5 0 010 7M18.5 6a8.5 8.5 0 010 12" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/><path class="slash" d="M3 3l18 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  <span id="soundLabel">Sound on</span>
+</button>
+<button class="enable-sound" id="enableSound" type="button" hidden>Enable sound</button>
+
+<main id="top">
+  <section class="hero" aria-labelledby="greeting-hi">
+    <div class="hero-light" aria-hidden="true"></div>
+    <div class="hero-diya diya lit" aria-hidden="true">
+      <span class="glow"></span>
+      <svg class="diya-svg" viewBox="0 0 120 60"><use href="#diya-body"/></svg>
+      <span class="flame"></span>
+    </div>
+    <h1 class="greeting">
+      <span class="greeting-hi" id="greeting-hi" lang="hi">शुभ दीपावली</span>
+      <span class="greeting-en">Happy Deepawali</span>
+    </h1>
+    <p class="blessing">May the light of every diya bring peace to your heart, prosperity to your home, and happiness to your life.</p>
+    <svg class="divider" viewBox="0 0 240 16" aria-hidden="true"><use href="#divider"/></svg>
+    <a class="scroll-cue" href="#mantras" aria-label="Scroll to the mantras">Mantras for the night</a>
+  </section>
+
+  <section class="mantras" id="mantras" aria-label="Mantras">
+    <article class="mantra" aria-labelledby="m1">
+      <h2 class="mantra-title" id="m1">Gayatri Mantra</h2>
+      <p class="mantra-sa" lang="sa">ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि।<br>धियो यो नः प्रचोदयात्॥</p>
+      <p class="mantra-en">We meditate upon the divine light of the Supreme; may it illuminate and inspire our intellect.</p>
+    </article>
+    <article class="mantra" aria-labelledby="m2">
+      <h2 class="mantra-title" id="m2">Lakshmi prayer</h2>
+      <p class="mantra-sa" lang="sa">ॐ श्रीं महालक्ष्म्यै नमः॥</p>
+      <p class="mantra-en">Salutations to Goddess Mahalakshmi, the goddess associated with prosperity and auspiciousness.</p>
+    </article>
+  </section>
+
+  <section class="celebrate" aria-labelledby="celebrate-h">
+    <svg class="divider" viewBox="0 0 240 16" aria-hidden="true"><use href="#divider"/></svg>
+    <h2 id="celebrate-h">Celebrate the Light</h2>
+    <p>Light the diyas and bring the festive night to life.</p>
+    <button class="btn btn-primary" id="playBtn" type="button" aria-haspopup="dialog">Play the Diwali Game</button>
+  </section>
+</main>
+
+<footer class="footer">
+  <svg class="divider" viewBox="0 0 240 16" aria-hidden="true"><use href="#divider"/></svg>
+  <p>May the light you kindle tonight stay with you through the year.</p>
+  <p class="footer-hi" lang="hi">शुभ दीपावली</p>
+</footer>
+
+<!-- Game panel -->
+<div class="overlay" id="gameOverlay" hidden>
+  <div class="panel game-panel" role="dialog" aria-modal="true" aria-labelledby="game-h" aria-describedby="game-desc" tabindex="-1">
+    <button class="close" type="button" data-close="game" aria-label="Close game">&times;</button>
+    <h2 id="game-h">Light the Five Diyas</h2>
+    <p id="game-desc" class="game-desc">Tap or press each diya to light it.</p>
+    <div class="diya-row" id="diyaRow">
+      <button class="diya" type="button" aria-pressed="false" aria-label="Diya 1, unlit"><span class="glow"></span><svg class="diya-svg" viewBox="0 0 120 60" aria-hidden="true"><use href="#diya-body"/></svg><span class="flame"></span></button>
+      <button class="diya" type="button" aria-pressed="false" aria-label="Diya 2, unlit"><span class="glow"></span><svg class="diya-svg" viewBox="0 0 120 60" aria-hidden="true"><use href="#diya-body"/></svg><span class="flame"></span></button>
+      <button class="diya" type="button" aria-pressed="false" aria-label="Diya 3, unlit"><span class="glow"></span><svg class="diya-svg" viewBox="0 0 120 60" aria-hidden="true"><use href="#diya-body"/></svg><span class="flame"></span></button>
+      <button class="diya" type="button" aria-pressed="false" aria-label="Diya 4, unlit"><span class="glow"></span><svg class="diya-svg" viewBox="0 0 120 60" aria-hidden="true"><use href="#diya-body"/></svg><span class="flame"></span></button>
+      <button class="diya" type="button" aria-pressed="false" aria-label="Diya 5, unlit"><span class="glow"></span><svg class="diya-svg" viewBox="0 0 120 60" aria-hidden="true"><use href="#diya-body"/></svg><span class="flame"></span></button>
+    </div>
+    <p class="progress" id="progress" role="status" aria-live="polite">0 of 5 diyas lit</p>
+    <div class="bar" aria-hidden="true"><span id="barFill"></span></div>
+    <p class="done-note" id="doneNote" hidden>All five diyas are lit.</p>
+  </div>
+</div>
+
+<!-- Greeting -->
+<div class="overlay greeting-overlay" id="greetOverlay" hidden>
+  <canvas id="fireworks" aria-hidden="true"></canvas>
+  <div class="panel greet-panel" role="dialog" aria-modal="true" aria-labelledby="greet-h" tabindex="-1">
+    <button class="close" type="button" data-close="greet" aria-label="Close greeting">&times;</button>
+    <p class="greet-hi" lang="hi">आपके जीवन में प्रकाश, सुख और समृद्धि बनी रहे।</p>
+    <h2 id="greet-h">Happy Deepawali!</h2>
+    <svg class="divider" viewBox="0 0 240 16" aria-hidden="true"><use href="#divider"/></svg>
+    <p class="greet-en">May your home shine with happiness, your heart glow with peace, and your future be filled with prosperity.</p>
+    <p class="signoff">With love and light,<br>Wishing you and your family a blessed Deepawali.</p>
+    <div class="actions">
+      <button class="btn btn-primary" id="againBtn" type="button">Celebrate Again</button>
+      <button class="btn btn-ghost" type="button" data-close="greet">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/audio.js"></script>
+<script src="js/fireworks.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
